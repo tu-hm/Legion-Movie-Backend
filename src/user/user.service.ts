@@ -23,8 +23,8 @@ export class UserService {
     return this.userRepository.save(user);
   }
 
-  async findOne(username: string): Promise<User | undefined> {
-    return this.userRepository.findOne({ where: { username } });
+  async findOne(id: number): Promise<User | undefined> {
+    return this.userRepository.findOne({ where: { id } });
   }
 
   async findAll(): Promise<User[]> {
